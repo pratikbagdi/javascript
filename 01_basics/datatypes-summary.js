@@ -5,7 +5,7 @@
 //  Primitive
 
 //  7 types : String, Number, Boolean, null(empty - tanhai), undefined, Symbol, BigInt
-
+/*
 const score = 100 //number
 const scoreValue = 100.3 //number
 console.log(typeof scoreValue) //number
@@ -45,4 +45,31 @@ const myFunction = function(){
     console.log("Hello world");
 }
 console.log(typeof myFunction); //function
+*/
+//Stack (Primitive)
+//we get the copy of the declared variable
+
+let myname = "Pratik"
+let anothername = myname
+anothername = "Mayur"
+
+console.log(myname); //Pratik
+console.log(anothername); //Mayur
+
+//Heap (Non-Primitive)
+//we get the reference of the declared variable
+
+let userOne = {
+    email: "user@gmail.com",
+    upi:  "upi@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "pratik@gmail.com"
+
+console.log(userOne.email) //pratik@gmail.com
+console.log(userTwo.email) //pratik@gmail.com
+
+//Refer image -> stackAndHeap.png  drawn by -> Excalidraw.com
 
