@@ -29,7 +29,20 @@ console.log(Math.min(3, 6, 9, 8, 5));
 console.log(Math.max(3, 6, 9, 8, 5));
 
 console.log(Math.random()); //gives value between 0 and 1
-console.log((Math.random()*10)+1);
+console.log((Math.random()*10)); //it can give value such as 0.6 if the original value is 0.06
+console.log((Math.random()*10)+1); //to avoid such case add 1 to it
+console.log(Math.floor(Math.random()*10)+1); //gives single number i.e. round of
 
+const min=10
+const max=20 // we need random value in our provided range
+
+console.log(Math.floor((Math.random())));
+//Math.floor - single digit value ; Math.random - random value ; 
+
+console.log(Math.floor((Math.random()*(max-min+1))+min)); // it will give accurate result we needed
+//20-10+1=11 ; 0.1*11 = 1.1 ; 1.1+10= 11.1; Math.floor(11.1)=11
+
+//whay + min? why not any other value such as +min-1
+console.log(Math.floor((Math.random()*(max-min+1))+min-1)); // also gives 9 as answer 
 
 
